@@ -6,6 +6,7 @@
   "scripts": {
     "capture":"./node_modules/.bin/casperjs capture.js",
     "evaluate":"./node_modules/.bin/casperjs evaluate.js",
+    "dataFetch":"./node_modules/.bin/casperjs dataFetch.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
