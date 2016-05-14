@@ -1,4 +1,7 @@
 var casper = require("casper").create();
+var fs = require('fs')
+
+var data
 
 casper.on('remote.message', function (msg) {
     console.log("remote message is: "+ msg);
@@ -9,7 +12,7 @@ casper.start("http://www.google.com", function () {
 })
 
 casper.wait(1000, function () {
-    var data = this.evaluate(function () {
+    data = this.evaluate(function () {
         // google serves different responses to different agents, to check what is my agent
         console.log(window.navigator.userAgent);
 
@@ -29,11 +32,10 @@ casper.wait(1000, function () {
         }
         return data;
     })
-    console.log(JSON.stringify(data))
 })
 
-// casper.then(function () {
-//     this.capture('./output/googleWithQuery.png')
-// })
-
-casper.run();
+casper.run(function () {
+    fs.write("./output/googleWithQuery.json", JSON.stringify(data, null, '\t'))
+    // this time we need exit because we implement run function
+    this.exit()
+});
