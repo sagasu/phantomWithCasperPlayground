@@ -35,5 +35,6 @@ node_modules
 #idea
 .idea
 
-# output directory
+# ignore output and images directories
 output
+images
