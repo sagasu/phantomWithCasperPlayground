@@ -8,6 +8,7 @@
     "evaluate":"./node_modules/.bin/casperjs evaluate.js",
     "dataFetch":"./node_modules/.bin/casperjs dataFetch.js",
     "visualRegression":"./node_modules/.bin/casperjs visualRegression.js",
+    "networkMonitoring":"./node_modules/.bin/casperjs networkMonitoring.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
