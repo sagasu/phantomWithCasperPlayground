@@ -24,7 +24,7 @@ casper.repeat(viewportSizes.length, function () {
             var title = this.getTitle()
             console.log(title)
 
-            // otherwise bing says that it is ready, but some things on a page did not funish loading.
+            // otherwise bing says that it is ready, but some things on a page did not finish loading.
             this.wait(2000, function () {
                 this.capture("./images/screenshot/"+index+ "_"+viewPortSize+".png")
             })
